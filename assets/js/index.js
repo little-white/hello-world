@@ -1,1 +1,1 @@
-$('#container').text(getData());
+$('#container').html(generateDom(getData()));
