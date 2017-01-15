@@ -1,1 +1,3 @@
-document.getElementsByTagName('div')[0].style.color = 'red';
+var data = "hello world";
+
+$('#container').text(data);
