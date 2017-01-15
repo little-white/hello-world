@@ -1,3 +1,1 @@
-var data = "hello world";
-
-$('#container').text(data);
+$('#container').text(getData());
