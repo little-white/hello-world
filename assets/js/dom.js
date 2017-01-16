@@ -1,13 +1,12 @@
 (function() {
-    function generateDom(data) {
-        var content = data.content;
-        var dom = '';
-        for (var i = 0, len = content.length; i < len; i++) {
-            dom += '<span>' + content[i].name + '</span>';
-        }
 
-        return dom;
+    function getTextTmplDom(data) {
+    	var dataArr = _.map(data.content, 'name');
+    	var textTmpl = $('#textTmpl').html();
+    	var helloWorldTmpl = $('#helloWorldTmpl').html();
+
+        return Mustache.render(textTmpl, {dataArr: dataArr}, {helloWorldTmpl:helloWorldTmpl});
     }
 
-    window.generateDom = generateDom;
+    window.getTextTmplDom = getTextTmplDom;
 })(window);
